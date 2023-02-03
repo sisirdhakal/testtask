@@ -8,7 +8,7 @@ type Props = {}
 const Topbar = (props: Props) => {
   return (
     <>
-      <div className='bg-[#50B848] py-1 w-screen   justify-center items-center'>
+      <div className='bg-[#50B848] py-1 w-screen justify-center items-center'>
         <div className=' items-center md:text-sm lg:text-base grid grid-cols-topbarMob lg:grid-cols-topbar lg:gap-x-2 mx-auto w-screen  lg:max-w-navbar px-2 lg:pl-3 '>
           <h1 className='text-white text-[0.9rem] hidden lg:block'> <span className='font-semibold'>FREE</span> shipping on any order with Pure Body Extra!</h1>
           <button className='font-bold lg:px-1 text-[0.7rem] lg:text-[1rem] w-28  py-[2px] border border-white text-white lg:w-32'>
@@ -43,7 +43,7 @@ const Topbar = (props: Props) => {
                 <MdArrowDropDown className=" h-6 w-6 text-white" />
               </div>
             </div>
-            <ul className="invisible top-[100%] group-hover:mt-[-5px] mt-[-20px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 w-[230px] ">
+            <ul className="invisible top-[100%] group-hover:mt-[-5px] mt-[-20px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] z-50 divide-white/30 text-gray-700 w-[230px] ">
               Select Language
             </ul>
           </div>
