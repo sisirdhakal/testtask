@@ -10,15 +10,30 @@ type Props = {}
 
 const Navbar = (props: Props) => {
 
+  const [isSidebarOpen, setsidebarOpen] = useState(false)
   const toggleNavbar = () => {
-
+    setsidebarOpen(!isSidebarOpen)
   }
+  const mobileNavbar = useRef<HTMLDivElement>(null);
 
   const router = useRouter()
+
+  useEffect(() => {
+    if (mobileNavbar.current) {
+      if (isSidebarOpen) {
+        mobileNavbar.current.classList.remove('-translate-x-full');
+        mobileNavbar.current.classList.add('translate-x-0');
+      } else {
+        mobileNavbar?.current.classList.remove('translate-x-0');
+        mobileNavbar?.current.classList.add('-translate-x-full');
+      }
+    }
+  }, [isSidebarOpen, mobileNavbar]);
+
   return (
     <>
       <div className='flex bg-[#1D1D1D] w-screen  justify-center items-center'>
-        <div className='flex items-center lg:grid h-[80px] lg:grid-cols-navbar mx-auto w-[95%]  lg:max-w-navbar '>
+        <div className='flex items-center lg:grid h-[80px] lg:grid-cols-navbar mx-auto w-screen  lg:max-w-navbar '>
           <div
             className={` cursor-pointer lg:hidden md:scale-100 h-6 w-12 md:w-10 my-auto relative flex items-center `}
           >
@@ -95,6 +110,22 @@ const Navbar = (props: Props) => {
                 </ul>
               </div>
             </ul>
+          </div>
+
+          <div ref={mobileNavbar} className='h-screen -translate-x-[110%] lg:hidden w-screen absolute transition-all ease-in-out duration-500 containerDiv'>
+            {/* <ul className='pb-5'>
+              {links.map((link) => {
+                const { id, text, url } = link
+                return (
+                  <Link href={url} key={id}>
+                    <li className="capitalize text-clrgrey3 text-lg tracking-wide px-5 py-4 hover:pl-7 hover:text-clrgrey2 transition-all ease-in-out duration-500 hover:bg-clrgrey10 cursor-pointer" onClick={toggleNavbar} >
+                      {text}
+                    </li>
+                  </Link>
+                )
+              })}
+
+            </ul> */}
           </div>
 
         </div>

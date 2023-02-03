@@ -25,3 +25,8 @@
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
+.containerDiv {
+    background-color: hsla(0, 0%, 100%, 0.9);
+    backdrop-filter: blur(8px);
+}

@@ -8,8 +8,8 @@ type Props = {}
 const Topbar = (props: Props) => {
   return (
     <>
-      <div className='bg-[#50B848] py-1 w-screen  justify-center items-center'>
-        <div className=' items-center md:text-sm lg:text-base grid grid-cols-topbarMob lg:grid-cols-topbar gap-x-2 mx-auto w-[95%]  lg:max-w-navbar pl-3 '>
+      <div className='bg-[#50B848] py-1 w-screen   justify-center items-center'>
+        <div className=' items-center md:text-sm lg:text-base grid grid-cols-topbarMob lg:grid-cols-topbar gap-x-2 mx-auto w-screen  lg:max-w-navbar pl-3 '>
           <h1 className='text-white text-[0.9rem] hidden lg:block'> <span className='font-semibold'>FREE</span> shipping on any order with Pure Body Extra!</h1>
           <button className='font-bold lg:px-1 text-[0.7rem] lg:text-[1rem] w-28  py-[2px] border border-white text-white lg:w-32'>
             JOIN US! (VBO)
@@ -47,7 +47,7 @@ const Topbar = (props: Props) => {
               Select Language
             </ul>
           </div>
-          <div className='h-full flex mx-2 justify-center cursor-pointer items-center relative group '>
+          <div className='h-full flex mx-2 justify-center cursor-pointer items-center relative group bg-red-200'>
             <div className=" font-semibold rounded relative items-center">
               <div className=" font-semibold rounded justify-center flex items-center">
                 <BsPersonFill className=" h-6 mr-1 w-5 text-white"/>
