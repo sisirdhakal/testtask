@@ -41,10 +41,20 @@ const Navbar = (props: Props) => {
           </div>
           <div className='hidden lg:flex items-center h-full justify-center'>
             <ul className='flex justify-center h-full px-2 items-center mt-2'>
-              <div className='mr-2'>
+              <div className='h-full flex justify-center items-center relative group '>
                 <button className='hover:bg-[#D28006] transition-all duration-200 ease-in-out w-[82px] h-[24px] font-semibold bg-[#f90] text-white'>
                   SHOP
                 </button>
+                <ul className="invisible top-[100%] group-hover:mt-[-5px] mt-[-20px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 w-[230px] ">
+                  {
+                    shopOptions.map(item => {
+                      return <li key={item.name} className="px-5 hover:bg-gray-400  text-clrgrey5 font-medium mb-[2px]  ">
+                        {item.name}
+                      </li>
+                    })
+                  }
+
+                </ul>
               </div>
               {links.map((link) => {
                 const { id, text, url, options } = link
@@ -61,7 +71,7 @@ const Navbar = (props: Props) => {
                     <ul className="invisible top-[100%] group-hover:mt-[-5px] mt-[-20px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 w-[230px] ">
                       {
                         options.map(item => {
-                          return <li key={item.name} className="px-5 hover:bg-gray-400  text-clrgrey5 font-medium  py-2  ">
+                          return <li key={item.name} className="px-5 hover:bg-gray-400  text-clrgrey5 font-medium py-2  ">
                             {item.name}
                           </li>
                         })
@@ -71,10 +81,18 @@ const Navbar = (props: Props) => {
                   </div>
                 )
               })}
-              <div className='navButtons hidden lg:flex cursor-pointer space-x-1 items-center px-3'>
-                <span className='relative'>
+              <div className='h-full relative group hidden lg:flex cursor-pointer space-x-1 items-center px-3'>
+                <div className=''>
                   <FaShoppingCart className='text-2xl text-white' />
-                </span>
+                </div>
+                <ul className="invisible top-[100%]  group-hover:mt-[-5px] mt-[-20px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 h-[192px] -right-20 w-[515px] flex justify-center items-center">
+                  <div className='mx-auto'>
+                    <div className='bg-green-200 p-4 rounded-full w-20 flex justify-center items-center h-20 mx-auto'>
+                      <FaShoppingCart className='text-4xl -ml-2 text-clrgrey7' />
+                    </div>
+                    <p className='text-lg text-clrgrey3 mx-auto font-medium text-center'>Your cart is lonely. Check out <span className='text-green-500'>our products</span>  to add some goodness.</p>
+                  </div>
+                </ul>
               </div>
             </ul>
           </div>
@@ -156,29 +174,79 @@ export const links = [
     url: "/",
     options: [
       {
-        name: "Collaborate",
+        name: "Why Touchstone",
         mobile: false
       },
       {
-        name: "Visionary Business Owner",
-        mobile: false
-      },
-      {
-        name: "Affiliate",
-        mobile: false
-      },
-      {
-        name: "Brand Ambassador",
-        mobile: false
-      },
-      {
-        name: "Touchstone Essentials Live",
-        mobile: false
-      },
-      {
-        name: "Premier Reward Trip NYC",
+        name: "About Us",
         mobile: false
       },
     ]
   }
+]
+export const shopOptions = [
+  {
+    name: "All Supplement",
+    mobile: false
+  },
+  {
+    name: "Best Sellers",
+    mobile: false
+  },
+  {
+    name: "Immune System",
+    mobile: false
+  },
+  {
+    name: "Daily Detox",
+    mobile: false
+  },
+  {
+    name: "Everyday Nutrition",
+    mobile: false
+  },
+  {
+    name: "Greens",
+    mobile: false
+  },
+  {
+    name: "Energy",
+    mobile: false
+  },
+  {
+    name: "Heart",
+    mobile: false
+  },
+  {
+    name: "Joints",
+    mobile: false
+  },
+  {
+    name: "Metabolism",
+    mobile: false
+  },
+  {
+    name: "Protein",
+    mobile: false
+  },
+  {
+    name: "Product Packs",
+    mobile: false
+  },
+  {
+    name: "USDA Organic",
+    mobile: false
+  },
+  {
+    name: "Vegan",
+    mobile: false
+  },
+  {
+    name: "Vitamin D",
+    mobile: false
+  },
+  {
+    name: "Zeolite",
+    mobile: false
+  },
 ]
