@@ -57,7 +57,7 @@ const Topbar = (props: Props) => {
                 <MdArrowDropDown className=" h-6 w-6 text-white hidden lg:block" />
               </div>
             </div>
-            <ul className="invisible top-[100%] group-hover:mt-[5px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 grid lg:grid-cols-2 gap-x-5 right-0 py-[25px] px-[20px] z-50 text-gray-700 lg:w-[600px] w-[300px] ">
+            <ul className="invisible top-[100%] group-hover:mt-[5px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 grid lg:grid-cols-2 gap-x-5 -right-20 lg:right-0 py-[25px] px-[20px] z-50 text-gray-700 lg:w-[600px] w-[300px] ">
 
               <div className='border-2 border-[#FF9900] px-4 py-4 rounded-md'>
                 <h3 className=' text-center text-2xl mb-2 font-medium  tracking-wide text-[#FF9900]'>Shop & Track Orders</h3>

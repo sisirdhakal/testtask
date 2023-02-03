@@ -27,6 +27,6 @@
 }
 
 .containerDiv {
-    background-color: hsla(0, 0%, 100%, 0.9);
+    background-color: hsla(0, 2%, 8%, 0.9);
     backdrop-filter: blur(8px);
 }
