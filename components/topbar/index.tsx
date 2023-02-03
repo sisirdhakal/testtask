@@ -1,7 +1,15 @@
 import React from 'react'
 
-export default function Topbar() {
+type Props = {}
+
+const Topbar = (props: Props) => {
   return (
-    <div>Topbar</div>
+    <>
+      <div>
+
+      </div>
+    </>
   )
 }
+
+export default Topbar
