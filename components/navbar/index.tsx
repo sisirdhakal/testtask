@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useEffect, useRef, useState } from 'react'
 import { Divide as Hamburger } from 'hamburger-react'
+import { FaShoppingCart } from 'react-icons/fa'
 
 type Props = {}
 
@@ -15,7 +16,7 @@ const Navbar = (props: Props) => {
   const router = useRouter()
   return (
     <>
-      <div className='flex top-0 z-40 py-4 bg-[#1D1D1D] w-screen fixed  justify-center items-center'>
+      <div className='flex py-4 bg-[#1D1D1D] w-screen  justify-center items-center'>
         <div className='flex items-center lg:grid grid-cols-navbar mx-auto w-screen lg:w-[95%]  lg:max-w-navbar '>
           <div
             className={` cursor-pointer lg:hidden origin-left md:scale-100 h-6 w-12 md:w-10 my-auto mr-auto relative flex items-center `}
@@ -36,13 +37,18 @@ const Navbar = (props: Props) => {
             </div>
           </Link>
           <div className='hidden lg:flex items-center justify-center'>
-            <ul className='flex justify-center px-2'>
+            <ul className='flex justify-center px-2 items-center'>
+              <div>
+                <button>
+
+                </button>
+              </div>
               {links.map((link) => {
                 const { id, text, url } = link
                 return (
                   <li key={id} className="mx-4 px-2 relative">
                     <Link href={url}>
-                      <p className='capitalize text-lg tracking-wide text-clrgrey3'>
+                      <p className='capitalize font-medium text-white tracking-wide text-clrgrey3'>
                         {text}
                       </p>
                     </Link>
@@ -57,6 +63,15 @@ const Navbar = (props: Props) => {
               })}
             </ul>
           </div>
+
+          <div className='navButtons hidden lg:flex cursor-pointer space-x-1 items-center px-3'>
+            {/* <p className='text-2xl tracking-wide'>Cart</p> */}
+            <span className='relative'>
+              {/* <span className='absolute bg-[#AB7A5F] ml-4 -mt-2 rounded-full h-5 w-5 text-white items-center justify-center flex '>0</span> */}
+              <FaShoppingCart className='text-2xl text-white' />
+            </span>
+          </div>
+
         </div>
       </div>
     </>
