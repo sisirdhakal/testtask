@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.testUl {
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+}
+
+.test:hover ul {
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
+    margin-top: 108px;
+}
+
+.test ul {
+    margin-top: 80px;
+    /* transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 1s;
+    transition-property: margin; */
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}

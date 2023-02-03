@@ -7,6 +7,25 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        /* darkest grey - used for headings */
+        clrgrey1: "#102a42",
+        clrgrey2: "#243a52",
+        clrgrey3: "#324d67",
+        clrgrey4: "#48647f",
+        /* grey used for paragraphs */
+        clrgrey5: "#617d98",
+        clrgrey6: "#829ab0",
+        clrgrey7: "#9eb2c7",
+        clrgrey8: "#bcccdc",
+        clrgrey9: "#dae2ec",
+        clrgrey10: "#f1f5f8",
+        clrreddark: "#ba2626",
+        clrredlight: "#e66b6b",
+        clrgreendark: "#25bb32",
+        clrgreenlight: "#6be675",
+        clrblack: "#222"
+      },
       gridTemplateColumns: {
         "navbar": "auto minmax(0,1fr) auto",
         "services": "repeat(auto-fit, minmax(360px, 1fr))",
