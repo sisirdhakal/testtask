@@ -47,7 +47,7 @@ const Navbar = (props: Props) => {
                 </button>
               </div>
               {links.map((link) => {
-                const { id, text, url } = link
+                const { id, text, url, options } = link
                 return (
                   <div key={id} className="group h-full relative flex justify-center items-center px-2  cursor-pointer">
                     <div className=" font-semibold rounded relative items-center">
@@ -58,10 +58,15 @@ const Navbar = (props: Props) => {
                         <MdOutlineKeyboardArrowDown className=" h-5 mt-1 w-5 text-white" />
                       </div>
                     </div>
-                    <ul className="invisible group-hover:mt-[108px] mt-[70px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 w-[230px] ">
-                      <li className="px-5 hover:bg-gray-400  text-clrgrey5 font-medium  py-2  ">
-                        Personal website package
-                      </li>
+                    <ul className="invisible top-[100%] group-hover:mt-[-5px] mt-[-20px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 w-[230px] ">
+                      {
+                        options.map(item => {
+                          return <li key={item.name} className="px-5 hover:bg-gray-400  text-clrgrey5 font-medium  py-2  ">
+                            {item.name}
+                          </li>
+                        })
+                      }
+
                     </ul>
                   </div>
                 )
@@ -87,18 +92,93 @@ export const links = [
     id: 1,
     text: "collaborate",
     url: "/",
-    options: []
+    options: [
+      {
+        name: "Collaborate",
+        mobile: false
+      },
+      {
+        name: "Visionary Business Owner",
+        mobile: false
+      },
+      {
+        name: "Affiliate",
+        mobile: false
+      },
+      {
+        name: "Brand Ambassador",
+        mobile: false
+      },
+      {
+        name: "Touchstone Essentials Live",
+        mobile: false
+      },
+      {
+        name: "Premier Reward Trip NYC",
+        mobile: false
+      },
+    ]
   },
   {
     id: 2,
     text: "community",
     url: "/",
-    options:[]
+    options: [
+      {
+        name: "Blog",
+        mobile: false
+      },
+      {
+        name: "Good Inside Gear",
+        mobile: false
+      },
+      {
+        name: "Goode Rewards",
+        mobile: false
+      },
+      {
+        name: "Experts",
+        mobile: false
+      },
+      {
+        name: "Social Justice",
+        mobile: false
+      },
+      {
+        name: "Reviews",
+        mobile: false
+      },
+    ]
   },
   {
     id: 3,
     text: "why touchstone",
     url: "/",
-    options:[]
+    options: [
+      {
+        name: "Collaborate",
+        mobile: false
+      },
+      {
+        name: "Visionary Business Owner",
+        mobile: false
+      },
+      {
+        name: "Affiliate",
+        mobile: false
+      },
+      {
+        name: "Brand Ambassador",
+        mobile: false
+      },
+      {
+        name: "Touchstone Essentials Live",
+        mobile: false
+      },
+      {
+        name: "Premier Reward Trip NYC",
+        mobile: false
+      },
+    ]
   }
 ]
