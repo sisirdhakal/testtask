@@ -28,13 +28,9 @@ module.exports = {
       },
       gridTemplateColumns: {
         "navbar": "auto minmax(0,1fr) auto",
-        "services": "repeat(auto-fit, minmax(360px, 1fr))",
-        "form": "1fr auto",
-        "info": "125px 1fr",
-        "products": "150px 1fr",
-        "sort": "auto auto 1fr auto",
         "auto1": "auto 1fr",
-        "200px": "200px 1fr"
+        "topbar": "auto auto auto auto auto auto",
+        "topbarMob": "1fr auto auto auto"
       },
       maxWidth: {
         "navbar": "1170px"
@@ -48,5 +44,5 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms'),],
 }

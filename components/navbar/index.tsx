@@ -41,14 +41,14 @@ const Navbar = (props: Props) => {
           </div>
           <div className='hidden lg:flex items-center h-full justify-center'>
             <ul className='flex justify-center h-full px-2 items-center mt-2'>
-              <div className='h-full flex justify-center items-center relative group '>
+              <div className='h-full flex justify-center mr-2 cursor-pointer items-center relative group '>
                 <button className='hover:bg-[#D28006] transition-all duration-200 ease-in-out w-[82px] h-[24px] font-semibold bg-[#f90] text-white'>
                   SHOP
                 </button>
                 <ul className="invisible top-[100%] group-hover:mt-[-5px] mt-[-20px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 w-[230px] ">
                   {
                     shopOptions.map(item => {
-                      return <li key={item.name} className="px-5 hover:bg-gray-400  text-clrgrey5 font-medium mb-[2px]  ">
+                      return <li key={item.name} className="px-5 hover:text-clrgrey2  text-clrgrey6 font-medium mb-[2px]  ">
                         {item.name}
                       </li>
                     })
@@ -71,7 +71,7 @@ const Navbar = (props: Props) => {
                     <ul className="invisible top-[100%] group-hover:mt-[-5px] mt-[-20px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 w-[230px] ">
                       {
                         options.map(item => {
-                          return <li key={item.name} className="px-5 hover:bg-gray-400  text-clrgrey5 font-medium py-2  ">
+                          return <li key={item.name} className="px-5 hover:text-clrgrey2   text-clrgrey6 font-medium py-2  ">
                             {item.name}
                           </li>
                         })
