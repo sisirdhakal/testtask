@@ -17,25 +17,27 @@ const Navbar = (props: Props) => {
   return (
     <>
       <div className='flex py-4 bg-[#1D1D1D] w-screen  justify-center items-center'>
-        <div className='flex items-center lg:grid grid-cols-navbar mx-auto w-screen lg:w-[95%]  lg:max-w-navbar '>
+        <div className='flex items-center lg:grid lg:grid-cols-navbar mx-auto w-[95%]  lg:max-w-navbar '>
           <div
-            className={` cursor-pointer lg:hidden origin-left md:scale-100 h-6 w-12 md:w-10 my-auto mr-auto relative flex items-center `}
+            className={` cursor-pointer lg:hidden md:scale-100 h-6 w-12 md:w-10 my-auto relative flex items-center `}
           >
-            <Hamburger onToggle={toggleNavbar} size={36} color={"#ffffff"} />
+            <Hamburger onToggle={toggleNavbar} size={32} color={"#ffffff"} />
           </div>
-          <Link href={"/"}>
-            <div className='lg:w-[312px]  lg:h-[50px] w-[170px] h-[70px] relative cursor-pointer'>
-              <Image
-                alt=''
-                fill={true}
-                priority
-                className='object-contain' src={"/assets/Logo_Update.webp"}
-                sizes="(min-width: 60em) 24vw,
+          <div className='flex-1 flex justify-center items-center'>
+            <Link href={"/"}>
+              <div className='lg:w-[312px]  mx-auto  lg:h-[50px] w-[350px] h-[56px] relative cursor-pointer'>
+                <Image
+                  alt=''
+                  fill={true}
+                  priority
+                  className='object-contain' src={"/assets/Logo_Update.webp"}
+                  sizes="(min-width: 60em) 24vw,
                                     (min-width: 28em) 45vw,
                                     100vw"
-              />
-            </div>
-          </Link>
+                />
+              </div>
+            </Link>
+          </div>
           <div className='hidden lg:flex items-center justify-center'>
             <ul className='flex justify-center px-2 items-center'>
               <div>
