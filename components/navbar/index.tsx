@@ -41,7 +41,7 @@ const Navbar = (props: Props) => {
           </div>
           <div className='flex-1 flex justify-center items-center'>
             <Link href={"/"}>
-              <div className='lg:w-[312px]  mx-auto  lg:h-[50px] w-[350px] h-[56px] relative cursor-pointer'>
+              <div className='lg:w-[312px]  mx-auto  lg:h-[50px] w-[320px] h-[56px] relative cursor-pointer'>
                 <Image
                   alt=''
                   fill={true}

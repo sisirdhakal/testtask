@@ -9,7 +9,7 @@ const Topbar = (props: Props) => {
   return (
     <>
       <div className='bg-[#50B848] py-1 w-screen   justify-center items-center'>
-        <div className=' items-center md:text-sm lg:text-base grid grid-cols-topbarMob lg:grid-cols-topbar gap-x-2 mx-auto w-screen  lg:max-w-navbar pl-3 '>
+        <div className=' items-center md:text-sm lg:text-base grid grid-cols-topbarMob lg:grid-cols-topbar lg:gap-x-2 mx-auto w-screen  lg:max-w-navbar px-2 lg:pl-3 '>
           <h1 className='text-white text-[0.9rem] hidden lg:block'> <span className='font-semibold'>FREE</span> shipping on any order with Pure Body Extra!</h1>
           <button className='font-bold lg:px-1 text-[0.7rem] lg:text-[1rem] w-28  py-[2px] border border-white text-white lg:w-32'>
             JOIN US! (VBO)
@@ -47,7 +47,7 @@ const Topbar = (props: Props) => {
               Select Language
             </ul>
           </div>
-          <div className='h-full flex mx-2 justify-center cursor-pointer items-center relative group bg-red-200'>
+          <div className='h-full flex lg:mx-2 justify-center cursor-pointer items-center relative group'>
             <div className=" font-semibold rounded relative items-center">
               <div className=" font-semibold rounded justify-center flex items-center">
                 <BsPersonFill className=" h-6 mr-1 w-5 text-white"/>
@@ -88,7 +88,7 @@ const Topbar = (props: Props) => {
               </div>
             </ul>
           </div>
-          <div className='h-full flex lg:hidden mx-6 justify-center cursor-pointer items-center relative group '>
+          <div className='h-full flex lg:hidden mx-2 lg:mx-6 justify-center cursor-pointer items-center relative group '>
             <div className=" font-semibold rounded relative items-center">
               <div className=" font-semibold rounded  inline-flex items-center">
                 <span className="capitalize text-[0.9rem] text-white tracking-wide">
@@ -116,11 +116,11 @@ const Topbar = (props: Props) => {
             </ul>
 
           </div>
-          <div className='h-full  relative group flex lg:hidden cursor-pointer space-x-1 items-center px-3'>
+          <div className='h-full relative group flex lg:hidden cursor-pointer space-x-1 items-center px-3'>
             <div className=''>
               <FaShoppingCart className='text-2xl text-white' />
             </div>
-            <ul className="invisible top-[100%]  group-hover:mt-[8px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 h-[192px] right-0 w-[515px] flex justify-center items-center z-50">
+            <ul className="invisible top-[100%]  group-hover:mt-[8px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 h-[192px] right-0 lg:w-[515px] w-[340px] flex justify-center items-center z-50">
               <div className='mx-auto'>
                 <div className='bg-green-200 p-4 rounded-full w-20 flex justify-center items-center h-20 mx-auto'>
                   <FaShoppingCart className='text-4xl -ml-2 text-clrgrey7' />
