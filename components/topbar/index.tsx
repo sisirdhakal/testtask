@@ -10,7 +10,7 @@ const Topbar = (props: Props) => {
     <>
       <div className='bg-[#50B848] fixed top-0 z-50 flex w-screen justify-center items-center'>
         <div className=' items-center h-[44px] md:text-sm lg:text-base grid grid-cols-topbarMob lg:grid-cols-topbar lg:gap-x-2 mx-auto w-screen  lg:max-w-navbar px-2 lg:pl-3 '>
-          <h1 className='text-white text-[0.9rem] hidden lg:block'> <span className='font-semibold'>FREE</span> shipping on any order with Pure Body Extra!</h1>
+          <h1 className='text-white text-[0.9rem] lg:pr-3 hidden lg:block'> <span className='font-semibold'>FREE</span> shipping on any order with Pure Body Extra!</h1>
           <button className='font-bold lg:px-1 text-[0.7rem] lg:text-[1rem] w-28  py-[2px] border border-white text-white lg:w-32'>
             JOIN US! (VBO)
           </button>
@@ -23,15 +23,17 @@ const Topbar = (props: Props) => {
                 <MdArrowDropDown className=" h-6 w-6 text-white" />
               </div>
             </div>
-            <ul className="invisible top-[100%] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm text-gray-700 ml-12 w-screen h-[200px] z-50 ">
-              {/* {
-                shopOptions.map(item => {
-                  return <li key={item.name} className="px-5 hover:text-clrgrey2  text-clrgrey6 font-medium mb-[2px]  ">
-                    {item.name}
-                  </li>
-                })
-              } */}
-
+            <ul className="invisible top-[100%] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm text-gray-700 ml-[40px] px-[40px] py-[30px] w-screen z-50 ">
+              <div className='grid grid-cols-6 max-w-navbar mx-auto px-5'>
+                {
+                  options.map(item => {
+                    return <li key={item} className="px-[10px] hover:text-clrgrey2  text-clrgrey6 py-[5px] text-[1rem]  ">
+                      {item}
+                      <span>(USD)</span>
+                    </li>
+                  })
+                }
+              </div>
             </ul>
           </div>
           <div className='h-full hidden lg:flex justify-center mr-2 cursor-pointer items-center relative group '>
@@ -48,7 +50,7 @@ const Topbar = (props: Props) => {
             </ul>
           </div>
           <div className='h-full flex lg:mx-2 justify-center cursor-pointer items-center relative group'>
-            <div className=" font-semibold border-r w-full border-white relative items-center">
+            <div className=" font-semibold border-r lg:border-0 w-full border-white relative items-center">
               <div className=" font-semibold rounded justify-center flex items-center">
                 <BsPersonFill className=" h-6 mr-1 w-5 text-white" />
                 <span className="capitalize text-[0.9rem] text-white tracking-wide">
@@ -71,7 +73,7 @@ const Topbar = (props: Props) => {
                   Login to Shop
                 </button>
               </div>
-              {/* <div className='border-2 '> */}
+
               <div className='border-2 hidden lg:block border-[#70AC48] px-4 py-4 rounded-md'>
                 <h3 className=" text-center text-2xl font-medium  tracking-wide text-green-600 mb-2">Reports &amp; Resources</h3>
                 <h1 className='text-sm text-clrgrey4 text-center'>
@@ -90,14 +92,8 @@ const Topbar = (props: Props) => {
           </div>
           <div className='h-full flex lg:hidden mx-2 lg:mx-6 justify-center cursor-pointer items-center relative group '>
             <div className=" font-semibold rounded relative items-center">
-              {/* <div className=" font-semibold rounded  inline-flex items-center">
-                <MdComputer className=" h-6 mr-1 w-5 text-white" />
-                <span className="capitalize text-[0.9rem] text-white tracking-wide">
-                  Office
-                </span>
-                <MdArrowDropDown className=" h-6 w-6 text-white hidden lg:block" />
-              </div> */}
-              <div className=" font-semibold border-r w-full pr-2 border-white relative items-center">
+
+              <div className=" font-semibold border-r lg:border-0 w-full pr-2 border-white relative items-center">
                 <div className=" font-semibold rounded justify-center flex items-center">
                   <MdComputer className=" h-6 mr-1 w-5 text-white" />
                   <span className="capitalize text-[0.9rem] text-white tracking-wide">
@@ -159,69 +155,52 @@ const Topbar = (props: Props) => {
 
 export default Topbar
 
-export const shopOptions = [
-  {
-    name: "AUD",
-    mobile: false
-  },
-  {
-    name: "USD",
-    mobile: false
-  },
-  {
-    name: "Immune System",
-    mobile: false
-  },
-  {
-    name: "Daily Detox",
-    mobile: false
-  },
-  {
-    name: "Everyday Nutrition",
-    mobile: false
-  },
-  {
-    name: "Greens",
-    mobile: false
-  },
-  {
-    name: "Energy",
-    mobile: false
-  },
-  {
-    name: "Heart",
-    mobile: false
-  },
-  {
-    name: "Joints",
-    mobile: false
-  },
-  {
-    name: "Metabolism",
-    mobile: false
-  },
-  {
-    name: "Protein",
-    mobile: false
-  },
-  {
-    name: "Product Packs",
-    mobile: false
-  },
-  {
-    name: "USDA Organic",
-    mobile: false
-  },
-  {
-    name: "Vegan",
-    mobile: false
-  },
-  {
-    name: "Vitamin D",
-    mobile: false
-  },
-  {
-    name: "Zeolite",
-    mobile: false
-  },
+export const options = [
+  'Australia ',
+  'Austria ',
+  'Belgium ',
+  'Bulgaria ',
+  'Canada ',
+  'Canary Islands ',
+  'Chile ',
+  'Costa Rica ',
+  'Croatia ',
+  'Cyprus ',
+  'Czech Republic ',
+  'Denmark ',
+  'Estonia ',
+  'Finland ',
+  'France ',
+  'Germany ',
+  'Greece ',
+  'Hong Kong ',
+  'Hungary ',
+  'Ireland ',
+  'Italy ',
+  'Japan ',
+  'Latvia ',
+  'Lithuania ',
+  'Luxembourg ',
+  'Malaysia ',
+  'Malta ',
+  'Mexico ',
+  'Monaco ',
+  'Netherlands ',
+  'New Zealand ',
+  'Norway ',
+  'Panama ',
+  'Philippines ',
+  'Poland ',
+  'Portugal ',
+  'Romania ',
+  'Singapore ',
+  'Slovakia ',
+  'Slovenia ',
+  'South Korea ',
+  'Spain ',
+  'Sweden ',
+  'Switzerland ',
+  'Taiwan ',
+  'United Kingdom',
+  'United States ',
 ]
