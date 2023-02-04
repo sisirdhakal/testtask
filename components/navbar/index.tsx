@@ -4,7 +4,8 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useRef, useState } from 'react'
 import { Divide as Hamburger } from 'hamburger-react'
 import { FaShoppingCart } from 'react-icons/fa'
-import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
+import { MdOutlineKeyboardArrowDown, MdSearch } from 'react-icons/md'
+import { BsSearch } from 'react-icons/bs'
 
 type Props = {}
 
@@ -111,16 +112,11 @@ const Navbar = (props: Props) => {
               </div>
             </ul>
           </div>
-
-
-
         </div>
-
-
       </div>
-      <div ref={mobileNavbar} className='h-screen overflow-scroll -translate-x-full lg:hidden w-screen absolute transition-all ease-in-out duration-500 z-20 pt-36 containerDiv'>
+      <div ref={mobileNavbar} className='h-screen overflow-scroll -translate-x-full lg:hidden w-screen absolute transition-all ease-in-out duration-500 z-20 pt-36 bg-white'>
         <div className=''>
-          <ul className='grid grid-cols-1 gap-y-3 px-4 justify-center h-full items-center'>
+          <ul className='grid grid-cols-1 gap-y-1 px-4 justify-center h-full items-center'>
             <div className='h-full justify-center w-full cursor-pointer items-center relative group '>
               <button className='hover:bg-[#D28006] transition-all duration-200 ease-in-out w-full h-[44px] py-1 text-xl font-semibold bg-[#f90] text-white'>
                 SHOP
@@ -133,17 +129,15 @@ const Navbar = (props: Props) => {
                     </li>
                   })
                 }
-
-
               </ul>
             </div>
             {links.map((link) => {
               const { id, text, url, options } = link
               return (
-                <div key={id} className="group border-white relative justify-center items-center cursor-pointer">
-                  <div className=" font-semibold py-3 border group-hover:text-green-400 text-white rounded relative items-center">
+                <div key={id} className="group relative justify-center items-center cursor-pointer">
+                  <div className=" font-semibold py-3 border border-clrgrey9 group-hover:text-green-400 text-white relative items-center">
                     <div className=" font-semibold rounded  flex justify-center items-center">
-                      <span className="capitalize text-lg font-medium mx-auto  tracking-wide">
+                      <span className="uppercase text-lg  text-clrgrey2 font-medium mx-auto  tracking-wide">
                         {text}
                       </span>
                     </div>
@@ -156,12 +150,32 @@ const Navbar = (props: Props) => {
                         </li>
                       })
                     }
-
                   </ul>
                 </div>
               )
             })}
-            
+            <div className=" font-semibold py-3 border border-clrgrey9 group-hover:text-green-400 text-white relative items-center">
+              <div className=" font-semibold rounded  flex justify-center items-center">
+                <span className="uppercase text-xl  text-green-500 font-medium mx-auto  tracking-wide">
+                  <BsSearch className='w-6 h-6 text-xl rotate-90 text-clrgrey5' />
+
+                </span>
+              </div>
+            </div>
+            <div className=" font-semibold py-3 border border-clrgrey9 group-hover:text-green-400 text-white relative items-center">
+              <div className=" font-semibold rounded  flex justify-center items-center">
+                <span className="uppercase text-xl  text-[#ADD499] font-medium mx-auto  tracking-wide">
+                  join now
+                </span>
+              </div>
+            </div>
+            <div className=" font-semibold py-3 border border-clrgrey9 group-hover:text-green-400 text-white relative items-center">
+              <div className=" font-semibold rounded  flex justify-center items-center">
+                <span className="uppercase text-xl  text-[#ADD499] font-medium mx-auto  tracking-wide">
+                  LOGIN
+                </span>
+              </div>
+            </div>
           </ul>
         </div>
       </div>
@@ -170,6 +184,56 @@ const Navbar = (props: Props) => {
 }
 
 export default Navbar
+
+export const options = [
+  'Australia ',
+  'Austria ',
+  'Belgium ',
+  'Bulgaria ',
+  'Canada ',
+  'Canary Islands ',
+  'Chile ',
+  'Costa Rica ',
+  'Croatia ',
+  'Cyprus ',
+  'Czech Republic ',
+  'Denmark ',
+  'Estonia ',
+  'Finland ',
+  'France ',
+  'Germany ',
+  'Greece ',
+  'Hong Kong ',
+  'Hungary ',
+  'Ireland ',
+  'Italy ',
+  'Japan ',
+  'Latvia ',
+  'Lithuania ',
+  'Luxembourg ',
+  'Malaysia ',
+  'Malta ',
+  'Mexico ',
+  'Monaco ',
+  'Netherlands ',
+  'New Zealand ',
+  'Norway ',
+  'Panama ',
+  'Philippines ',
+  'Poland ',
+  'Portugal ',
+  'Romania ',
+  'Singapore ',
+  'Slovakia ',
+  'Slovenia ',
+  'South Korea ',
+  'Spain ',
+  'Sweden ',
+  'Switzerland ',
+  'Taiwan ',
+  'United Kingdom',
+  'United States ',
+]
 
 export const links = [
   {
