@@ -40,7 +40,7 @@ module.exports = {
       },
       gridTemplateRows: {
         "auto": "1fr 50px",
-        "nav": "auto 1fr",
+        "nav": "auto auto 1fr",
       }
     },
   },

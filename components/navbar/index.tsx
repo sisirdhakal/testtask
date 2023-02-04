@@ -33,7 +33,7 @@ const Navbar = (props: Props) => {
   return (
     <>
       <div className='flex bg-[#1D1D1D] fixed top-[44px] z-40 w-screen justify-center items-center'>
-        <div className='flex items-center relative lg:grid h-[80px] lg:grid-cols-navbar mx-auto w-full  lg:max-w-navbar '>
+        <div className='flex items-center lg:grid h-[80px] lg:grid-cols-navbar mx-auto w-full  lg:max-w-navbar '>
           <div
             className={` cursor-pointer lg:hidden md:scale-100 h-6 w-12 md:w-10 my-auto relative flex items-center `}
           >
@@ -75,12 +75,12 @@ const Navbar = (props: Props) => {
                 const { id, text, url, options } = link
                 return (
                   <div key={id} className="group h-full relative flex justify-center items-center px-2  cursor-pointer">
-                    <div className=" font-semibold rounded relative items-center">
+                    <div className=" font-semibold group-hover:text-green-400 text-white rounded relative items-center">
                       <div className=" font-semibold rounded  inline-flex items-center">
-                        <span className="capitalize font-medium text-white tracking-wide">
+                        <span className="capitalize  font-medium  tracking-wide">
                           {text}
                         </span>
-                        <MdOutlineKeyboardArrowDown className=" h-5 mt-1 w-5 text-white" />
+                        <MdOutlineKeyboardArrowDown className=" h-5 mt-1 w-5 " />
                       </div>
                     </div>
                     <ul className="invisible top-[100%] group-hover:mt-[-5px] mt-[-20px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 w-[230px] ">
@@ -98,7 +98,7 @@ const Navbar = (props: Props) => {
               })}
               <div className='h-full relative group hidden lg:flex cursor-pointer space-x-1 items-center px-3'>
                 <div className=''>
-                  <FaShoppingCart className='text-2xl text-white' />
+                  <FaShoppingCart className='text-2xl group-hover:text-yellow-600 text-white' />
                 </div>
                 <ul className="invisible top-[100%]  group-hover:mt-[-5px] mt-[-20px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 h-[192px] -right-20 w-[515px] flex justify-center items-center">
                   <div className='mx-auto'>
@@ -113,8 +113,57 @@ const Navbar = (props: Props) => {
           </div>
 
 
+
         </div>
 
+
+      </div>
+      <div ref={mobileNavbar} className='h-screen overflow-scroll -translate-x-full lg:hidden w-screen absolute transition-all ease-in-out duration-500 z-20 pt-36 containerDiv'>
+        <div className=''>
+          <ul className='grid grid-cols-1 gap-y-3 px-4 justify-center h-full items-center'>
+            <div className='h-full justify-center w-full cursor-pointer items-center relative group '>
+              <button className='hover:bg-[#D28006] transition-all duration-200 ease-in-out w-full h-[44px] py-1 text-xl font-semibold bg-[#f90] text-white'>
+                SHOP
+              </button>
+              <ul className="hidden top-[100%] transition-all duration-300 ease-in-out group-hover:block opacity-0 group-hover:opacity-100 bg-slate-100 text-gray-700 w-full right-0 ">
+                {
+                  shopOptions.map(item => {
+                    return item.mobile && <li key={item.name} className=" hover:text-clrgrey2  text-clrgrey6 text-center py-1 font-medium ">
+                      {item.name}
+                    </li>
+                  })
+                }
+
+
+              </ul>
+            </div>
+            {links.map((link) => {
+              const { id, text, url, options } = link
+              return (
+                <div key={id} className="group border-white relative justify-center items-center cursor-pointer">
+                  <div className=" font-semibold py-3 border group-hover:text-green-400 text-white rounded relative items-center">
+                    <div className=" font-semibold rounded  flex justify-center items-center">
+                      <span className="capitalize text-lg font-medium mx-auto  tracking-wide">
+                        {text}
+                      </span>
+                    </div>
+                  </div>
+                  <ul className="hidden top-[100%] transition-all duration-300 ease-in-out group-hover:block opacity-0 group-hover:opacity-100 bg-slate-100 text-gray-700 ">
+                    {
+                      options.map(item => {
+                        return <li key={item.name} className="px-5 hover:text-clrgrey2   text-clrgrey6 font-medium py-2  ">
+                          {item.name}
+                        </li>
+                      })
+                    }
+
+                  </ul>
+                </div>
+              )
+            })}
+            
+          </ul>
+        </div>
       </div>
     </>
   )
@@ -204,19 +253,19 @@ export const links = [
 export const shopOptions = [
   {
     name: "All Supplement",
-    mobile: false
+    mobile: true
   },
   {
     name: "Best Sellers",
-    mobile: false
+    mobile: true
   },
   {
     name: "Immune System",
-    mobile: false
+    mobile: true
   },
   {
     name: "Daily Detox",
-    mobile: false
+    mobile: true
   },
   {
     name: "Everyday Nutrition",
@@ -224,7 +273,7 @@ export const shopOptions = [
   },
   {
     name: "Greens",
-    mobile: false
+    mobile: true
   },
   {
     name: "Energy",
@@ -244,15 +293,15 @@ export const shopOptions = [
   },
   {
     name: "Protein",
-    mobile: false
+    mobile: true
   },
   {
     name: "Product Packs",
-    mobile: false
+    mobile: true
   },
   {
     name: "USDA Organic",
-    mobile: false
+    mobile: true
   },
   {
     name: "Vegan",
@@ -264,6 +313,6 @@ export const shopOptions = [
   },
   {
     name: "Zeolite",
-    mobile: false
+    mobile: true
   },
 ]
