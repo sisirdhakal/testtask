@@ -12,11 +12,11 @@
     /* display: block; */
     visibility: visible;
     opacity: 1;
-    margin-top: 108px;
+    margin-top: 5px;
 }
 
 .test ul {
-    margin-top: 80px;
+    margin-top: -25px;
     /* transition-duration: 0.3s;
     transition-timing-function: ease;
     transition-delay: 1s;

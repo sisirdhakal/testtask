@@ -30,7 +30,7 @@ module.exports = {
         "navbar": "auto minmax(0,1fr) auto",
         "auto1": "auto 1fr",
         "topbar": "auto auto auto auto auto auto",
-        "topbarMob": "1fr 140px auto auto"
+        "topbarMob": "1fr 132px auto auto"
       },
       maxWidth: {
         "navbar": "1170px"

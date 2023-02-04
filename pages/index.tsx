@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head> 
 
-      <div className='bg-gray-600 grid grid-rows-nav'>
+      <div className='bg-gray-600 h-screen grid grid-rows-nav'>
         <Topbar/>
         <Navbar/>
       </div>

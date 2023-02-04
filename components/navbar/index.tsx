@@ -32,7 +32,7 @@ const Navbar = (props: Props) => {
 
   return (
     <>
-      <div className='flex bg-[#1D1D1D] w-screen justify-center items-center'>
+      <div className='flex bg-[#1D1D1D] fixed top-[44px] z-40 w-screen justify-center items-center'>
         <div className='flex items-center relative lg:grid h-[80px] lg:grid-cols-navbar mx-auto w-full  lg:max-w-navbar '>
           <div
             className={` cursor-pointer lg:hidden md:scale-100 h-6 w-12 md:w-10 my-auto relative flex items-center `}

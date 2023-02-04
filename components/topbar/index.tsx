@@ -1,5 +1,5 @@
 import React from 'react'
-import { MdArrowDropDown, MdSearch } from 'react-icons/md'
+import { MdArrowDropDown, MdSearch, MdComputer } from 'react-icons/md'
 import { FaShoppingCart } from 'react-icons/fa'
 import { BsPersonFill } from 'react-icons/bs'
 
@@ -8,8 +8,8 @@ type Props = {}
 const Topbar = (props: Props) => {
   return (
     <>
-      <div className='bg-[#50B848] py-1 w-screen justify-center items-center'>
-        <div className=' items-center md:text-sm lg:text-base grid grid-cols-topbarMob lg:grid-cols-topbar lg:gap-x-2 mx-auto w-screen  lg:max-w-navbar px-2 lg:pl-3 '>
+      <div className='bg-[#50B848] fixed top-0 z-50 flex w-screen justify-center items-center'>
+        <div className=' items-center h-[44px] md:text-sm lg:text-base grid grid-cols-topbarMob lg:grid-cols-topbar lg:gap-x-2 mx-auto w-screen  lg:max-w-navbar px-2 lg:pl-3 '>
           <h1 className='text-white text-[0.9rem] hidden lg:block'> <span className='font-semibold'>FREE</span> shipping on any order with Pure Body Extra!</h1>
           <button className='font-bold lg:px-1 text-[0.7rem] lg:text-[1rem] w-28  py-[2px] border border-white text-white lg:w-32'>
             JOIN US! (VBO)
@@ -23,14 +23,14 @@ const Topbar = (props: Props) => {
                 <MdArrowDropDown className=" h-6 w-6 text-white" />
               </div>
             </div>
-            <ul className="invisible top-[100%] group-hover:mt-[5px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 w-[230px] ">
+            <ul className="invisible top-[100%] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm text-gray-700 ml-12 w-screen h-[200px] z-50 ">
               {/* {
-                    shopOptions.map(item => {
-                      return <li key={item.name} className="px-5 hover:text-clrgrey2  text-clrgrey6 font-medium mb-[2px]  ">
-                        {item.name}
-                      </li>
-                    })
-                  } */}
+                shopOptions.map(item => {
+                  return <li key={item.name} className="px-5 hover:text-clrgrey2  text-clrgrey6 font-medium mb-[2px]  ">
+                    {item.name}
+                  </li>
+                })
+              } */}
 
             </ul>
           </div>
@@ -43,21 +43,21 @@ const Topbar = (props: Props) => {
                 <MdArrowDropDown className=" h-6 w-6 text-white" />
               </div>
             </div>
-            <ul className="invisible top-[100%] group-hover:mt-[-5px] mt-[-20px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] z-50 divide-white/30 text-gray-700 w-[230px] ">
+            <ul className="invisible top-[100%]  transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] z-50 divide-white/30 text-gray-700 w-[230px] p-5">
               Select Language
             </ul>
           </div>
           <div className='h-full flex lg:mx-2 justify-center cursor-pointer items-center relative group'>
-            <div className=" font-semibold rounded relative items-center">
+            <div className=" font-semibold border-r w-full border-white relative items-center">
               <div className=" font-semibold rounded justify-center flex items-center">
-                <BsPersonFill className=" h-6 mr-1 w-5 text-white"/>
+                <BsPersonFill className=" h-6 mr-1 w-5 text-white" />
                 <span className="capitalize text-[0.9rem] text-white tracking-wide">
                   My Account
                 </span>
                 <MdArrowDropDown className=" h-6 w-6 text-white hidden lg:block" />
               </div>
             </div>
-            <ul className="invisible top-[100%] group-hover:mt-[5px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 grid lg:grid-cols-2 gap-x-5 -right-20 lg:right-0 py-[25px] px-[20px] z-50 text-gray-700 lg:w-[600px] w-[300px] ">
+            <ul className="invisible top-[100%] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 grid lg:grid-cols-2 gap-x-5 -right-20 lg:right-0 py-[25px] px-[20px] z-50 text-gray-700 lg:w-[600px] w-[300px] ">
 
               <div className='border-2 border-[#FF9900] px-4 py-4 rounded-md'>
                 <h3 className=' text-center text-2xl mb-2 font-medium  tracking-wide text-[#FF9900]'>Shop & Track Orders</h3>
@@ -90,14 +90,24 @@ const Topbar = (props: Props) => {
           </div>
           <div className='h-full flex lg:hidden mx-2 lg:mx-6 justify-center cursor-pointer items-center relative group '>
             <div className=" font-semibold rounded relative items-center">
-              <div className=" font-semibold rounded  inline-flex items-center">
+              {/* <div className=" font-semibold rounded  inline-flex items-center">
+                <MdComputer className=" h-6 mr-1 w-5 text-white" />
                 <span className="capitalize text-[0.9rem] text-white tracking-wide">
                   Office
                 </span>
                 <MdArrowDropDown className=" h-6 w-6 text-white hidden lg:block" />
+              </div> */}
+              <div className=" font-semibold border-r w-full pr-2 border-white relative items-center">
+                <div className=" font-semibold rounded justify-center flex items-center">
+                  <MdComputer className=" h-6 mr-1 w-5 text-white" />
+                  <span className="capitalize text-[0.9rem] text-white tracking-wide">
+                    Office
+                  </span>
+                  <MdArrowDropDown className=" h-6 w-6 text-white hidden lg:block" />
+                </div>
               </div>
             </div>
-            <ul className="invisible top-[100%] group-hover:mt-[4px]   transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 grid lg:grid-cols-2 gap-x-5 right-0 py-[25px] px-[20px] z-50 text-gray-700 lg:w-[600px] w-[300px] ">
+            <ul className="invisible top-[100%] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 grid lg:grid-cols-2 gap-x-5 right-0 py-[25px] px-[20px] z-50 text-gray-700 lg:w-[600px] w-[300px] ">
               {/* <div className='border-2 '> */}
               <div className='border-2 border-[#70AC48] px-4 py-4 rounded-md'>
                 <h3 className=" text-center text-2xl font-medium  tracking-wide text-green-600 mb-2">Reports &amp; Resources</h3>
@@ -116,11 +126,11 @@ const Topbar = (props: Props) => {
             </ul>
 
           </div>
-          <div className='h-full relative group flex lg:hidden cursor-pointer space-x-1 items-center px-3'>
+          <div className='h-full relative group flex lg:hidden cursor-pointer space-x-1 items-center px-2'>
             <div className=''>
-              <FaShoppingCart className='text-2xl text-white' />
+              <FaShoppingCart className='text-xl text-white' />
             </div>
-            <ul className="invisible top-[100%]  group-hover:mt-[8px] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 h-[192px] right-0 lg:w-[515px] w-[340px] flex justify-center items-center z-50">
+            <ul className="invisible top-[100%] transition-all duration-300 ease-in-out group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-slate-100 backdrop-blur-sm divide-y-[1px] divide-white/30 text-gray-700 h-[192px] right-0 lg:w-[515px] w-[340px] flex justify-center items-center z-50">
               <div className='mx-auto'>
                 <div className='bg-green-200 p-4 rounded-full w-20 flex justify-center items-center h-20 mx-auto'>
                   <FaShoppingCart className='text-4xl -ml-2 text-clrgrey7' />
