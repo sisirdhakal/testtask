@@ -11,7 +11,7 @@ const Topbar = (props: Props) => {
       <div className='bg-[#50B848] fixed top-0 z-50 flex w-screen justify-center items-center'>
         <div className=' items-center h-[44px] md:text-sm lg:text-base grid grid-cols-topbarMob lg:grid-cols-topbar lg:gap-x-2 mx-auto w-screen  lg:max-w-navbar px-2 lg:pl-3 '>
           <h1 className='text-white text-[0.9rem] lg:pr-3 hidden lg:block'> <span className='font-semibold'>FREE</span> shipping on any order with Pure Body Extra!</h1>
-          <button className='font-bold lg:px-1 text-[0.7rem] lg:text-[1rem] w-28  py-[2px] border border-white text-white lg:w-32'>
+          <button className='font-bold lg:px-1 text-[0.7rem] lg:text-[1rem] w-[98px]  py-[2px] border border-white text-white lg:w-32'>
             JOIN US! (VBO)
           </button>
           <div className='h-full hidden lg:flex justify-center mr-2 cursor-pointer items-center relative group '>
@@ -90,7 +90,7 @@ const Topbar = (props: Props) => {
               </div>
             </ul>
           </div>
-          <div className='h-full flex lg:hidden mx-2 lg:mx-6 justify-center cursor-pointer items-center relative group '>
+          <div className='h-full flex lg:hidden ml-2 mr-1 lg:mx-6 justify-center cursor-pointer items-center relative group '>
             <div className=" font-semibold rounded relative items-center">
 
               <div className=" font-semibold border-r lg:border-0 w-full pr-2 border-white relative items-center">
